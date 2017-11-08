@@ -1,0 +1,4 @@
+On evClick
+	If pWhat=kJSNativeListPartAccessory
+		Do $cinst.$showmessage('Button Clicked','Native List')
+	End If

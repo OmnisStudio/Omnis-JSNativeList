@@ -1,0 +1,14 @@
+;  Enter your initialization code here
+Do iMainList.$define(iSubList,iMainText)
+Do iSubList.$define(iTextCol1,iTextCol2,iAccessoryType,iAccessoryContent,iAccessoryValueCol,iImagePath)
+
+Do iSubList.$add('Button','kJSNativeListAccessoryTypeButton',kJSNativeListAccessoryTypeButton,'My Button',,'images/applets/welcome_holidays1.png')
+Do iSubList.$add('Checkbox','kJSNativeListAccessoryTypeCheckbox',kJSNativeListAccessoryTypeCheckbox,'Check',kTrue,'images/applets/welcome_timesheets1.png')
+Do iSubList.$add('Disclosure','kJSNativeListAccessoryTypeDisclosure',kJSNativeListAccessoryTypeDisclosure,'',,'images/applets/welcome_webshop1.png')
+Do iMainList.$add(iSubList,'Main Types')
+
+;  custom accessories can have embedded html such as the <img> tag shown below
+Do iSubList.$clear()
+Do iSubList.$add('Custom','kJSNativeListAccessoryTypeCustom',kJSNativeListAccessoryTypeCustom,'<img src="images/arrows/right_dis_2x.png" style="max-height:32px;max-width:32px"/>',,'images/applets/welcome_contacts1.png')
+Do iSubList.$add('Custom + event','kJSNativeListAccessoryTypeCustomWithEvent',kJSNativeListAccessoryTypeCustomWithEvent,'<img src="images/arrows/right_2x.png" style="max-height:32px;max-width:32px"/>',,'images/applets/welcome_todo1.png')
+Do iMainList.$add(iSubList,'Other Types')
